@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 200px;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        color: #000;
+        font-size: 50px;
+        font-weight: 400;
+      }
+    }
+
+    form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      input {
+        width: 100%;
+        max-width: 500px;
+        padding: 20px 10px;
+        border-radius: 10px;
+        background: transparent;
+        color: #000;
+        background: #ffffffdf;
+        font-size: 20px;
+
+        &::placeholder {
+          color: #000;
+        }
+      }
+
+      .search {
+        margin-top: 20px;
+        padding: 15px 30px;
+        background: #000;
+        font-size: 20px;
+        border-radius: 50px;
+        color: #fff;
+        cursor: pointer;
+        transition: 200ms all;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .download {
+    color: #000;
+    margin-top: 20px;
+    font-size: 18px;
+    position: absolute;
+    bottom: -80px;
+    display: flex;
+    align-items: center;
+    background: rgba(128, 0, 128, 0.272);
+    border-radius: 50px;
+    color: #fff;
+    padding: 10px 15px;
+    transition: 500ms all;
+
+    svg {
+      margin-left: 10px;
+      width: 25px;
+    }
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .container {
+    .content {
+      header {
+        img {
+          width: 160px;
+        }
+
+        h1 {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:578px) {
+  .container {
+    padding: 0 10px;
+
+    .content {
+      header {
+        img {
+          width: 130px;
+        }
+
+        h1 {
+          font-size: 25px;
+        }
+      }
+
+      form {
+        input {
+          padding: 15px 10px;
+          width: 100%;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
